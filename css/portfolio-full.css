@@ -1,0 +1,218 @@
+body  {
+    font-family: "quicksandregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow-x:hidden;
+    height: 100%;
+    color: #ccc;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+
+
+
+
+
+header {
+
+   	position: relative;
+	height: 400px;
+   width: 100%;
+   background: #161415 url(../img/header2.jpg) no-repeat top center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   
+   text-align: center;
+   overflow: hidden;
+     
+}
+
+header .portfolio-banner {
+    position: relative;
+    height: 400px;
+    
+}
+
+header .portfolio-banner .inner {
+    position: absolute;
+    top: 50%;
+    color: aliceblue;
+    
+    
+}
+
+header .portfolio-banner h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: "josefin_slabbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header .portfolio-banner hr {
+    width: 65%;
+   margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    margin-left: 0;
+    transition: cubic-bezier(.11, 1.13, 1, .98) .8s;
+}
+
+header .portfolio-banner:hover hr {
+    width: 95%;
+    border-color: #9f1640;
+}
+
+#full-portfolio {
+    background-color: #191718;
+}
+nav {
+  
+}
+nav a {
+	position: relative;
+	display: inline-block;
+	
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+.push {
+  position: relative;
+	z-index: 1;  
+}
+
+.push a {
+	overflow: hidden;
+	margin: 0 15px;
+}
+
+.push a span {
+	display: block;
+	padding: 10px 20px;
+	background: #0d0c0d;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+.push a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 10px 20px;
+	width: 100%;
+	height: 100%;
+	background: #9f1640;
+	color: #fff;
+	content: attr(data-hover);
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(-25%);
+}
+
+.push a:hover span,
+.push a:focus span {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.push a:hover::before,
+.push a:focus::before {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+
+#portfolio-container {
+    margin-top: 50px;
+
+}
+
+
+#portfolio-container .pad {
+    padding: 5px;
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    
+    
+}
+
+.portfolio-item .hover-wrap {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(159, 22, 64, 0.68);
+      -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.portfolio-item .hover-wrap i {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+	color: #FFFFFF;
+	font-size: 32px;
+	line-height: 1em;
+	-webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-transition: all .2s ease-in-out .2s;
+    transition: all .2s ease-in-out .2s;
+    opacity: 0;
+	
+}
+
+.portfolio-item span {
+    font-family: "montserrat-regular", sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #9f1640;
+    background-color: #fff;
+	font-size: 19px;
+    font-weight: 600;
+	line-height: 1em;
+    padding: 5px;
+
+}
+.portfolio-item:hover .hover-wrap {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.portfolio-item:hover .hover-wrap i {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    
+}
+.portfolio-item:hover .hover-wrap i:hover {
+    color: rgba(255, 255, 255, 0.76);
+}
